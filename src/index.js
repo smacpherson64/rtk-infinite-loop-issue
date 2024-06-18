@@ -38,16 +38,11 @@ function Parent() {
 }
 
 function Child() {
-  const { isLoading, error } = useGetPokemonByNameQuery({
+  useGetPokemonByNameQuery({
     name: "bulbasaur",
   });
 
-  return (
-    <div>
-      {error && <>Child error...</>}
-      {isLoading && <>Child loading...</>}
-    </div>
-  );
+  return null;
 }
 
 const rootElement = document.getElementById("root");
